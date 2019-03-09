@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Xunit;
 
@@ -113,6 +114,19 @@ namespace AnonymousTypes.Test {
             Assert.Equal(anonymous1.GetHashCode(), anonymous2.GetHashCode());
 
             Assert.False(anonymous1.Equals(anonymous3Different));
+        }
+
+        [Fact]
+        public void anonymous_types_are_decorated_with_debugger_display_attribute() {
+            var anonymous = new { X = 1 };
+
+            var debuggerDisplay = anonymous.GetType()
+                .GetCustomAttributes(inherit: true)
+                .OfType<DebuggerDisplayAttribute>()
+                .Single();
+
+            Assert.Equal("\\{ X = {X} }", debuggerDisplay.Value);
+            Assert.Equal("<Anonymous Type>", debuggerDisplay.Type);
         }
     }
 }
