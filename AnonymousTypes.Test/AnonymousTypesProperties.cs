@@ -37,6 +37,7 @@ namespace AnonymousTypes.Test {
                 test,
                 test.field,
                 test.Property,
+                // base.Property,
                 ExplicitName = test,
 
                 // error:
@@ -128,6 +129,21 @@ namespace AnonymousTypes.Test {
 
             Assert.Equal("\\{ X = {X} }", debuggerDisplay.Value);
             Assert.Equal("<Anonymous Type>", debuggerDisplay.Type);
+        }
+
+        [Fact]
+        public void anonymous_types_can_be_created_using_reflection() {
+            // Oder of ctor paramters is the same as order of declared fields,
+            // in this case ctor(Field1, Field2).
+            var anonymous = new {
+                Field1 = "foo",
+                Field2 = 2
+            };
+
+            var type = anonymous.GetType();
+            var copy = Activator.CreateInstance(type, new object[] { "foo", 2 });
+
+            Assert.Equal(anonymous, copy);
         }
     }
 }
