@@ -114,6 +114,7 @@ namespace AnonymousTypes.Test {
             Assert.Equal(anonymous1.GetHashCode(), anonymous2.GetHashCode());
 
             Assert.False(anonymous1.Equals(anonymous3Different));
+            Assert.False(anonymous1.Equals(null));
         }
 
         [Fact]
