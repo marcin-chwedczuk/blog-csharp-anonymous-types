@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousTypes", "AnonymousTypes\AnonymousTypes.csproj", "{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousTypes.Test", "AnonymousTypes.Test\AnonymousTypes.Test.csproj", "{32F4DD01-57D5-4629-8B53-9DF33425A8E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark", "Benchmark\Benchmark.csproj", "{11493760-0E69-48D1-9B04-3FED76AAF092}"
@@ -22,18 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|x64.Build.0 = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Debug|x86.Build.0 = Debug|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|x64.ActiveCfg = Release|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|x64.Build.0 = Release|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|x86.ActiveCfg = Release|Any CPU
-		{F72E59D6-E9A3-4773-A58B-CA5D23718B5A}.Release|x86.Build.0 = Release|Any CPU
 		{32F4DD01-57D5-4629-8B53-9DF33425A8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32F4DD01-57D5-4629-8B53-9DF33425A8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F4DD01-57D5-4629-8B53-9DF33425A8E4}.Debug|x64.ActiveCfg = Debug|Any CPU
