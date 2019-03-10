@@ -1,6 +1,6 @@
 
 
-# Anonymous types undercover
+# Anonymous types under cover
 
 NOTE: _Due to some problems with upgrading Jekyll, this blog post is exceptionally
 presented as GitHub `README.md`._
