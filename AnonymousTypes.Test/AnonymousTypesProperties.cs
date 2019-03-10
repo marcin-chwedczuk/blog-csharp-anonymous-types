@@ -37,7 +37,6 @@ namespace AnonymousTypes.Test {
                 test,
                 test.field,
                 test.Property,
-                // base.Property,
                 ExplicitName = test,
 
                 // error:
@@ -116,6 +115,22 @@ namespace AnonymousTypes.Test {
 
             Assert.False(anonymous1.Equals(anonymous3Different));
             Assert.False(anonymous1.Equals(null));
+        }
+
+        [Fact]
+        public void GetHashCode_depends_on_property_names() {
+            var a = new { X = 1, Y = 2 };
+            var b = new { foo = 1, bar = 2 };
+
+            Assert.NotEqual(a.GetHashCode(), b.GetHashCode());
+        }
+
+        [Fact]
+        public void GetHashCode_depends_on_order_of_properties() {
+            var a = new { X = "xxx", Y = "yyy" };
+            var b = new { Y = "yyy", X = "xxx" };
+
+            Assert.NotEqual(a.GetHashCode(), b.GetHashCode());
         }
 
         [Fact]
